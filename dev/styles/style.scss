@@ -1,6 +1,257 @@
+@import 'partials/normalize';
+@import 'partials/header';
+@import 'partials/colors';
+
+
+.wrapper {
+	width: 90%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
 body {
-	background: red;
+	font-family: 'Raleway', cursive
+}
+
+.logo {
+	font-family: 'Kurale', serif;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: orange;
+}
+h1,h2,h3,h4,h5,p {
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px; 
+}
+h1 {
+	font-size: 80px;
 }
 h2 {
-	color: green;
+	font-size: 40px;
+}
+p {
+	line-height: 1.618;
+	letter-spacing: 1px;
+}
+
+img {
+	width: 100%;
+}
+
+section {
+	padding: 80px 0;
+}
+
+.button {
+	border: 1px solid orange;
+	background: transparent;
+	padding: 15px 45px;
+	color: orange;
+	margin: 30px 0;
+}
+
+// ---- CONTENT ------
+header {
+	background: linear-gradient(rgba(233,233,233,0.5), rgba(233,233,233,0.5)), url('../../assets/img/cnTower.jpg');
+	background-size: contain;
+	background-position: 70%;
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	.triangleDown{
+		position: absolute;
+		bottom: 0;
+	}
+	h1 {
+		color: black;
+		line-height: 0.8;
+		span {
+			font-weight: 100;
+		}
+	}
+	.headerText {
+		height: calc(100% - 71px);
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+nav {
+	width: 100%;
+	background: white;
+	box-shadow: 0 4px 10px 1px grey;
+	.wrapper {
+		padding: 10px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		ul {
+			display: flex;
+			li {
+				list-style: none;
+				margin-left: 15px;
+			}
+		}
+		
+	}
+	
+}
+.triangleDown {
+	height: 120px;
+	width: 100%;
+	background: white;
+	clip-path: polygon(0% 0%, 66.666% 100%, 100% 0%, 100% 100%, 0% 100%);
+}
+.triangleDown1 {
+	height: 120px;
+	width: 100%;
+	background: gray;
+	clip-path: polygon(0% 0%, 100% 0%, 66.66% 100%, 0% 0%);
+}
+.triangleUp {
+	height: 120px;
+	width: 100%;
+	background: gray;
+	clip-path: polygon(0% 100%, 33.33% 0%, 100% 100%, 0% 100%);
+}
+
+
+
+.keyline {
+	height: 1px;
+	width: 50px;
+	background: red;
+}
+
+.devicon {
+	font-size: 30px;
+	color: lightgrey;
+}
+.aboutMe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	ul {
+		display: flex;
+		margin-bottom: 50px;
+		div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-right: 10px;
+			width: 100px;
+			p {
+				font-size: 12px;
+				margin-top: 5px;
+			}
+		}
+	}
+}	
+
+.col {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	// border: 1px solid green;
+}
+.col-text {
+	width: 30%;
+	font-weight: bolder;
+	text-align: right;
+	// border: 1px solid red;
+	line-height: 1.75;
+	font-size: 20px;
+	// padding: 0 20px;
+}
+.col-img {
+	// border: 1px solid red;
+	width: 300px;
+	margin: 0 30px;
+	box-shadow: 0 2px 10px 1px black;
+	img {
+		height: 100%;
+	}
+}
+.col-full {
+	width: 30%;
+	text-align: left;
+	line-height: 1.75;
+	letter-spacing: 1px;
+}
+
+
+.work {
+	background: grey;
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.sectionTitle {
+	margin-bottom: 50px;
+}
+
+.workPiece {
+	width: 80%;
+	margin: 0 auto;
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: -120px;
+	.imageContainer {
+		width: 325px;
+		height: 450px;
+		position: relative;
+		background: url('../../assets/img/sampleProject.jpg');
+		background-size: cover;
+		background-position: center;
+		position: relative;
+	}
+	// .imageContainer:first-of-type {
+	// 	margin-top: 0;
+	// }
+	p {
+		position: absolute;
+		top: 50%;
+		right: -60%;
+		width: 220px;
+		font-size: 12px;
+		text-transform: lowercase;
+	}
+}
+.workPiece:nth-of-type(even) {
+	justify-content: flex-end;
+	p {
+		color: red;
+		left: -40%;
+	}
+}
+.workPiece:first-of-type {
+	margin-top: -120px;
+}
+
+.blog {
+	height: 500px;
+	display: flex;
+}
+.blogColMain {
+	background: url('../../assets/img/meCrop.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 40%;
+	height: 100%;
+}
+.blogCol {
+
+	width: 30%;
+}
+
+.profile {
+	background: grey;
 }
