@@ -129,7 +129,93 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 header {
-  background: pink; }
+  background: linear-gradient(rgba(52, 73, 94, 0.95), rgba(52, 73, 94, 0.95)), url("../../assets/img/2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 93vh;
+  width: 100%;
+  position: relative; }
+  header .wrapper {
+    position: relative; }
+    header .wrapper .scrollDown {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 80%;
+      font-size: 60px;
+      color: #363738;
+      z-index: 99; }
+    header .wrapper .scrollDown:hover {
+      color: #c6aa82; }
+  header .headerText {
+    animation-delay: 0.4s;
+    animation-duration: 3s;
+    margin-top: 136px;
+    text-align: right;
+    width: 50%;
+    transform: translateY(-25%); }
+    header .headerText h1 {
+      line-height: 0.8;
+      letter-spacing: 4px;
+      font-size: 100px; }
+    header .headerText h3 {
+      color: #f1f7f7;
+      letter-spacing: 4px;
+      margin-top: 10px;
+      margin-right: 4px; }
+  header .firstSVG {
+    position: absolute;
+    bottom: 0; }
+
+nav {
+  width: 100%;
+  background: transparent;
+  margin: 0 0 -116px;
+  transition: all 0.8s;
+  animation-delay: 0.4s;
+  animation-duration: 3s; }
+  nav .wrapper {
+    padding: 40px 0;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    nav .wrapper div {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      width: 100%; }
+      nav .wrapper div .res_menu {
+        width: 30px; }
+    nav .wrapper .logo {
+      width: 80px; }
+    nav .wrapper .nav_menu {
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0; }
+      nav .wrapper .nav_menu li {
+        list-style: none;
+        margin-left: 55px; }
+      nav .wrapper .nav_menu a:hover {
+        border-bottom: 1px solid white; }
+
+.main-nav-scrolled {
+  background: linear-gradient(#f1f7f7, rgba(241, 247, 247, 0.97));
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  box-shadow: 0 0 5px 1px #34495e;
+  min-height: 75px;
+  padding-top: 15px; }
+  .main-nav-scrolled .wrapper {
+    padding: 5px 0; }
+    .main-nav-scrolled .wrapper .logo {
+      width: 50px; }
+    .main-nav-scrolled .wrapper a {
+      color: #34495e; }
 
 .wrapper {
   width: 90%;
@@ -228,8 +314,12 @@ section {
   border: 1px solid #34495e;
   color: #34495e;
   transition: all 0.4s; }
+  .btn_dark a {
+    color: #34495e; }
   .btn_dark:hover {
     background: #34495e; }
+    .btn_dark:hover a {
+      color: #f1f7f7; }
 
 .btn_light {
   border: 1px solid #c6aa82;
@@ -239,95 +329,6 @@ section {
 
 .res_menu {
   display: none; }
-
-header {
-  background: linear-gradient(rgba(52, 73, 94, 0.95), rgba(52, 73, 94, 0.95)), url("../../assets/img/2.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  height: 93vh;
-  width: 100%;
-  position: relative; }
-  header .wrapper {
-    position: relative; }
-    header .wrapper .scrollDown {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 80%;
-      font-size: 60px;
-      color: #363738;
-      z-index: 99; }
-    header .wrapper .scrollDown:hover {
-      color: #c6aa82; }
-  header .headerText {
-    animation-delay: 0.4s;
-    animation-duration: 3s;
-    margin-top: 136px;
-    text-align: right;
-    width: 50%;
-    transform: translateY(-25%); }
-    header .headerText h1 {
-      line-height: 0.8;
-      letter-spacing: 4px;
-      font-size: 100px; }
-    header .headerText h3 {
-      color: #f1f7f7;
-      letter-spacing: 4px;
-      margin-top: 10px;
-      margin-right: 4px; }
-  header .firstSVG {
-    position: absolute;
-    bottom: 0; }
-
-nav {
-  width: 100%;
-  background: transparent;
-  margin: 0 0 -116px;
-  transition: all 0.8s;
-  animation-delay: 0.4s;
-  animation-duration: 3s; }
-  nav .wrapper {
-    padding: 40px 0;
-    -ms-flex-pack: center;
-        justify-content: center; }
-    nav .wrapper div {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-      -ms-flex-align: start;
-          align-items: flex-start;
-      width: 100%; }
-      nav .wrapper div .res_menu {
-        width: 30px; }
-    nav .wrapper .logo {
-      width: 80px; }
-    nav .wrapper .nav_menu {
-      display: -ms-flexbox;
-      display: flex;
-      padding: 0; }
-      nav .wrapper .nav_menu li {
-        list-style: none;
-        margin-left: 55px; }
-      nav .wrapper .nav_menu a:hover {
-        border-bottom: 1px solid white; }
-
-.main-nav-scrolled {
-  background: linear-gradient(#f1f7f7, rgba(241, 247, 247, 0.97));
-  padding: 0;
-  position: fixed;
-  top: 0;
-  z-index: 90;
-  box-shadow: 0 0 5px 1px #34495e;
-  min-height: 75px;
-  padding-top: 15px; }
-  .main-nav-scrolled .wrapper {
-    padding: 5px 0; }
-    .main-nav-scrolled .wrapper .logo {
-      width: 50px; }
-    .main-nav-scrolled .wrapper a {
-      color: #34495e; }
 
 .sectionTitle {
   margin-bottom: 100px;
@@ -421,10 +422,8 @@ nav {
   padding: 200px 0; }
   .work .secondSVG {
     position: absolute;
-    top: 0; }
-  .work .thirdSVG {
-    position: absolute;
-    bottom: 0; }
+    top: 0;
+    left: 0; }
   .work .wrapper {
     display: -ms-flexbox;
     display: flex;
@@ -436,6 +435,10 @@ nav {
     color: #f1f7f7; }
     .work .sectionTitle .keyline {
       background: #c6aa82; }
+  .work .thirdSVG {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
 
 .work_content {
   width: 90%;
@@ -608,6 +611,7 @@ form {
     margin-bottom: 25px;
     padding: 10px 5px;
     letter-spacing: 2px;
+    width: 100%;
     color: #f1f7f7;
     outline-color: #f1f7f7; }
   form .btn {
@@ -730,6 +734,9 @@ form {
     margin: 20px 0; } }
 
 @media (max-width: 500px) {
+  nav {
+    position: absolute;
+    top: 0; }
   section {
     padding: 80px 0; }
   .workPieceBackground {

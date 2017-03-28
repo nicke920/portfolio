@@ -1,13 +1,6 @@
 @import 'partials/normalize';
-@import 'partials/header';
 @import 'partials/colors';
-
-
-$darkBlack: rgba(54,55,56,1);
-$accentColor: rgba(198,170,130,1);
-$primaryBlue: rgb(52, 73, 94);
-$lightGrey: rgb(161,170,178);
-$white: rgb(241,247,247);
+@import 'partials/header';
 
 .wrapper {
 	width: 90%;
@@ -102,13 +95,20 @@ section {
 		transform: translateY(1px);
 		box-shadow: 0 10px 4px -5px $darkBlack;
 	}
+
 }
 .btn_dark {
 	border: 1px solid $primaryBlue;
 	color: $primaryBlue;
 	transition: all 0.4s;
+	a {
+		color: $primaryBlue;
+	}
 	&:hover {
 		background: $primaryBlue;
+		a {
+			color: $white;
+		}
 	}
 }
 .btn_light {
@@ -117,6 +117,7 @@ section {
 	&:hover {
 		background: $accentColor;
 	}
+
 }
 
 .res_menu {
@@ -125,112 +126,6 @@ section {
 
 
 // ---- CONTENT ------
-header {
-	background: linear-gradient(rgba($primaryBlue, 0.95), rgba($primaryBlue, 0.95)), url('../../assets/img/2.jpg');
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
-	height: 93vh;
-	width: 100%;
-	position: relative;	
-	.wrapper {
-		position: relative;
-		.scrollDown {
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			top: 80%;
-			font-size: 60px;
-			color: $darkBlack;
-			z-index: 99;
-		}
-		.scrollDown:hover {
-			color: $accentColor;
-		}
-	}
-	.headerText {
-		animation-delay: 0.4s;
-		animation-duration: 3s;
-		margin-top: 136px;
-		text-align: right;
-		width: 50%;
-		transform: translateY(-25%);
-		h1 {
-			line-height: 0.8;
-			letter-spacing: 4px;
-			font-size: 100px;
-		}
-		h3 {
-			color: $white;
-			letter-spacing: 4px;
-			margin-top: 10px;
-			margin-right: 4px;
-		}
-	}
-	.firstSVG {
-		position: absolute;
-		bottom: 0;
-	}
-}
-
-nav {
-	width: 100%;
-	background: transparent;
-	margin: 0 0 -116px;
-	transition: all 0.8s;
-	animation-delay: 0.4s;
-	animation-duration: 3s;
-	.wrapper {
-		padding: 40px 0;
-		justify-content: center;
-		div {
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-start;
-			width: 100%;
-			.res_menu {
-				width: 30px;
-			}
-		}
-		.logo {
-			width: 80px;
-		}
-		.nav_menu {
-			display: flex;
-			padding: 0;
-			li {
-				list-style: none;
-				margin-left: 55px;
-			}
-			a:hover {
-				border-bottom: 1px solid white;
-			}
-		}
-
-	}
-}
-
-.main-nav-scrolled {
-	background: linear-gradient(rgba($white, 1), rgba($white,0.97));
-	padding: 0;
-	position: fixed;
-	top: 0;
-	z-index: 90;
-	box-shadow: 0 0 5px 1px $primaryBlue;
-	min-height: 75px;
-	padding-top: 15px;
-	.wrapper {
-		padding: 5px 0;
-		.logo {
-			width: 50px;
-		}
-		a {
-			color: $primaryBlue;
-		}
-	} 
-}
-
-//SECTIONS
 
 .sectionTitle {
 	margin-bottom: 100px;
@@ -333,10 +228,7 @@ nav {
 	.secondSVG {
 		position: absolute;
 		top: 0;
-	}
-	.thirdSVG {
-		position: absolute;
-		bottom: 0;
+		left: 0;
 	}
 	.wrapper {
 		display: flex;
@@ -348,6 +240,11 @@ nav {
 		.keyline {
 			background: $accentColor;
 		}
+	}
+	.thirdSVG {
+		position: absolute;
+		bottom: 0;
+		left: 0;
 	}
 }
 
@@ -526,6 +423,7 @@ form {
 		margin-bottom: 25px;
 		padding: 10px 5px;
 		letter-spacing: 2px; 
+		width: 100%;
 		color: $white;
 		outline-color: $white;
 	}
@@ -693,6 +591,10 @@ form {
 
 }
 @media (max-width: 500px) {
+	nav {
+		position: absolute;
+		top: 0;
+	}
 	section {
 		padding: 80px 0;
 	}
