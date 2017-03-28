@@ -2,142 +2,289 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
-	<link rel="stylesheet" href="public/styles/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Kurale|Raleway:200,800" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="public/styles/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 </head>
 <body>
-<header>
-	<nav>
+<header id="header">
+	<nav class="animated fadeIn">
 		<div class="wrapper">
-			<p class="logo">Nick</p>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Contact</a></li>
+			<div>
+				<a href="#" id="home_link"><img src="assets/img/logo.png" alt="" class="logo"></a>
+				<img src="assets/img/menu.svg" alt="" class="res_menu">
+			</div>
+			<ul class="nav_menu">
+				<li><a href="#" id="about_link">About</a></li>
+				<li><a href="#" id="work_link">Portfolio</a></li>
+				<li><a href="#" id="skills_link">Skills</a></li>
+				<li><a href="#" id="contact_link">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
-	<div class="headerText">
-		<h1><span>Nick</span> <br>Evans</h1>
-		<h3>Front End Developer</h3>
+	<div class="wrapper">
+		<div class="headerText animated fadeIn">
+			<h1><span class="light">Nick</span><br><span class="color">Evans</span></h1>
+			<h3>Front End Developer</h3>
+		</div>
+		<a href="#" id="about_link2"><i class="scrollDown fa fa-angle-down wow animated fadeInDown" aria-hidden="true"></i></a>
 	</div>
-	<div class="triangleDown"></div>
+	<div class='firstSVG'>
+		<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path d="M0, 0 L 0,100 100,100 100,0 70,100 Z" />
+		</svg>
+	</div>
 </header>
 
 <main>
-<section class="aboutMe wrapper">
+<section class="aboutMe content_wrapper">
 	<div class="sectionTitle">
 		<h5>01</h5>
 		<div class="keyline"></div>
 		<h2>About Me</h2>
 	</div>
-	<ul>
-		<div>
-			<i class="devicon devicon-html5-plain"></i>
-			<p>HTML</p>
-		</div>
-		<div>
-		<i class="devicon devicon-css3-plain"></i>
-			<p>CSS</p>
-		</div>
-		<div>
-			<i class="devicon devicon-javascript-plain"></i>
-			<p>Javascript</p>
-		</div>
-		<div>
-			<i class="devicon devicon-jquery-plain"></i>
-			<p>jQuery</p>
-		</div>
-		<div>
-			<i class="devicon devicon-react-original"></i>
-			<p>React</p>
-		</div>
-		<div>
-			<i class="devicon devicon-gulp-plain"></i>
-			<p>Gulp</p>
-		</div>
-	</ul>
 
-	<div class="col">
-		<div class="col-text">Hello I'm Nicholas, a Front end web selveoper & UI Designer based in Toronto, Canada. I create modern, beautiful websites and plenty of cool stuff. Check me out</div>
+	<div class="aboutMe_Content wow animated fadeIn">
+		<div class="col_text">
+			<ul>
+				<li>
+					<img src="assets/img/code.png" alt="">
+					<p>Coding</p>
+				</li>
+				<li>
+					<img src="assets/img/brainstorm.png" alt="">
+					<p>Creative Problem Solving</p>
+				</li>
+				<li>
+					<img src="assets/img/dance.png" alt="">
+					<p>Salsa Dancing</p>
+				</li>
+			</ul>
+			<div class="col_header">
+				<p>Hello I'm Nicholas, a Front end web selveoper & UI Designer based in Toronto, Canada. I create modern, beautiful websites and plenty of cool stuff. Check me out</p>
+			</div>
+			<div class="col_details">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aut, facilis debitis consequatur hic quisquam mollitia quia, quos numquam excepturi, eius id reiciendis at neque ducimus. Consectetur modi laudantium laborum!</p>
+			</div>
+		</div>
 		<div class="col-img">
 			<img src="assets/img/meCrop.jpg" alt="">
 		</div>
-		<div class="col-full">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aut, facilis debitis consequatur hic quisquam mollitia quia, quos numquam excepturi, eius id reiciendis at neque ducimus. Consectetur modi laudantium laborum!</div>
 	</div>
 
-	<button class="button">Checkout My Profile</button>
+	<button class="btn btn_dark">Checkout My Profile</button>
 </section>
 
-<div class="triangleUp"></div>
-
 <section class="work">
+	<div class='secondSVG'>
+		<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path d="M0,0 L 100,0 100,100 30,0 0,100 Z" />
+		</svg>
+	</div>
 	<div class="wrapper">
 		<div class="sectionTitle">
 			<h5>02</h5>
 			<div class="keyline"></div>
 			<h2>Work</h2>
 		</div>
-		<div class="workPiece">
-			<div class="imageContainer">
-				<p>Lorem ipsum dolor sit amet, consectetur</p>
+		<div class="work_content">
+			<div class="workPieceBackground wow animated fadeIn">
+				<div class="workPiece">
+					<div class="workImage piece1">
+
+					</div>
+					<div class="workDetails">
+						<h3>Name Of Work Goes Here</h3>
+						<div>
+							<p>html</p>
+							<p>css</p>
+							<p>javascript</p>
+							<p>react</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quam ab, tempore excepturi.</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="workPiece">
-			<div class="imageContainer">
-				<p>Lorem ipsum dolor sit amet, consectetur</p>
+			<div class="workPieceBackground wow animated fadeIn">
+				<div class="workPiece">
+					<div class="workImage piece4">
+
+					</div>
+					<div class="workDetails">
+						<h3>Name Of Work Goes Here</h3>
+						<div>
+							<p>html</p>
+							<p>css</p>
+							<p>javascript</p>
+							<p>react</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quam ab, tempore excepturi.</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="workPiece">
-			<div class="imageContainer">
-				<p>Lorem ipsum dolor sit amet, consectetur</p>
+			<div class="workPieceBackground wow animated fadeIn">
+				<div class="workPiece">
+					<div class="workImage piece2">
+
+					</div>
+					<div class="workDetails">
+						<h3>Name Of Work Goes Here</h3>
+						<div>
+							<p>html</p>
+							<p>css</p>
+							<p>javascript</p>
+							<p>react</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quam ab, tempore excepturi.</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="workPiece">
-			<div class="imageContainer">
-				<p>Lorem ipsum dolor sit amet, consectetur</p>
+			<div class="workPieceBackground wow animated fadeIn">
+				<div class="workPiece">
+					<div class="workImage piece5">
+
+					</div>
+					<div class="workDetails">
+						<h3>Name Of Work Goes Here</h3>
+						<div>
+							<p>html</p>
+							<p>css</p>
+							<p>javascript</p>
+							<p>react</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quam ab, tempore excepturi.</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="workPiece">
-			<div class="imageContainer">
-				<p>Lorem ipsum dolor sit amet, consectetur</p>
+			<div class="workPieceBackground wow animated fadeIn">
+				<div class="workPiece">
+					<div class="workImage piece3">
+
+					</div>
+					<div class="workDetails">
+						<h3>Name Of Work Goes Here</h3>
+						<div>
+							<p>html</p>
+							<p>css</p>
+							<p>javascript</p>
+							<p>react</p>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quam ab, tempore excepturi.</p>
+					</div>
+				</div>
 			</div>
+			
+			
 		</div>
 	</div>
+	<div class='thirdSVG'>
+		<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path d="M0,0 L 0,100 100,100 100,0 70,100 Z" />
+		</svg>
+	</div>
 </section>
-<div class="triangleDown1"></div>
-<section class="blog">
+
+<section class="skills">
 	<div class="wrapper">
-		<h2>Blog</h2>
-		<div class="blogColMain">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero iusto veritatis inventore harum eos aliquam labore illum tempora perferendis quod?
+		<div class="sectionTitle">
+			<h5>03</h5>
+			<div class="keyline"></div>
+			<h2>Skills</h2>
 		</div>
-		<div class="blogCol">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita nobis reiciendis quod ad dolore porro debitis facilis similique officia.
-		</div>
-		<div class="blogCol">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore magnam adipisci temporibus illo voluptates excepturi, consequatur quas tempora quidem sed.
-		</div>
+		<ul>
+			<div class="row1">
+				<div>
+					<i class="devicon devicon-html5-plain"></i>
+					<p>HTML</p>
+				</div>
+				<div>
+				<i class="devicon devicon-css3-plain"></i>
+					<p>CSS</p>
+				</div>
+				<div>
+					<i class="devicon devicon-javascript-plain"></i>
+					<p>Javascript</p>
+				</div>
+				<div>
+					<i class="devicon devicon-jquery-plain"></i>
+					<p>jQuery</p>
+				</div>
+				<div>
+					<i class="devicon devicon-react-original"></i>
+					<p>React</p>
+				</div>
+
+				<div>
+					<i class="devicon devicon-gulp-plain"></i>
+					<p>Gulp</p>
+				</div>
+				<div>
+					<i class="devicon devicon-git-plain"></i>
+					<p>Git</p>
+				</div>
+				<div>
+					<i class="devicon devicon-github-plain"></i>
+					<p>Github</p>
+				</div>
+				<div>
+					<i class="devicon devicon-sass-original"></i>
+					<p>Sass</p>
+				</div>
+				<div>
+					<i class="devicon devicon-babel-plain"></i>
+					<p>Babel</p>
+				</div>
+			</div>
+		</ul>
 	</div>
 </section>
-<div class="triangleUp"></div>
-<section class="profile">
-	<div class="wrapper">
-		<h2>Profile</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem obcaecati accusantium perferendis debitis rem fuga, quisquam. Cum quidem tempore distinctio dicta qui, ipsa sequi amet fuga voluptatem nisi quo delectus iusto quis excepturi, neque deleniti, corporis! Fugiat dolores deleniti dolorem neque provident optio, quod voluptatibus at harum, magni quisquam laudantium!</p>
-		<button>Hire Me</button>
-		<button>Download Resume</button>
-	</div>
-</section>
-<div class="triangleDown1"></div>
 </main>
+
 <footer>
-	<h2>Contact</h2>
-	<h3>evans2nick@gmail.com</h3>
-	<h3>555-555-5555</h3>
+	<div class='secondSVG'>
+		<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path d="M0,0 L 100,0 100,100 30,0 0,100 Z" />
+		</svg>
+	</div>
+	<div class="wrapper">
+		<div class="sectionTitle">
+			<h5>04</h5>
+			<div class="keyline"></div>
+			<h2>Contact</h2>
+		</div>
+		<div class="footerContainer content_wrapper">
+			<div class="footerContent footerText">
+				<h3>hello@nickevansmedia.com</h3>
+				<div class="socialMedia">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+					<i class="fa fa-medium" aria-hidden="true"></i>
+					<i class="fa fa-github" aria-hidden="true"></i>
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="footerContent footerForm">
+				<form action="https://formspree.io/evans2nick@gmail.com" method="POST">
+					<label for="name">Name</label>
+					<input type="text" name="name" class="userInputs">
+					<label for="email">Email</label>
+					<input type="email" name="email" class="userInputs" id="userEmail">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" cols="30" rows="2" class="userInputs"></textarea>
+					<input type="submit" value="Submit" class="btn btn_light">
+				</form>
+			</div>
+		</div>
+	</div>
 </footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script src="public/scripts/main.js"></script>
 </body>
 </html>
