@@ -317,19 +317,18 @@ section {
 	div {
 		margin: 10px 0;
 		display: flex;
-		width: 70%;
-		justify-content: space-between;
+		width: 100%;
+		justify-content: flex-start;
+		flex-wrap: wrap;
 		p {
 			background: $accentColor;
 			color: $white;
-			padding: 5px 10px;
+			padding: 5px 15px;
+			margin: 0 8px 8px 0;
 		}
 	}
 	h3 {
 		font-size: 24px;
-	}
-	p {
-		font-size: 12px;
 	}
 }
 
@@ -368,9 +367,6 @@ section {
 					color: $accentColor;
 				}
 			}
-		}
-		.row1 {
-			margin-bottom: 100px;
 		}
 	}
 }
@@ -510,6 +506,9 @@ form {
 }
 
 @media (max-width: 645px) {
+	nav .wrapper {
+		justify-content: flex-start;
+	}
 	.work_content {
 		align-items: center;
 	}
@@ -537,8 +536,13 @@ form {
 			font-size: 18px;
 		}
 	}
+	nav {
+		z-index: 9999;
+	}
 	nav .wrapper {
 		flex-direction: column;
+		// position: absolute;
+		z-index: 999;
 		div {
 			width: 100%;
 			justify-content: space-between;
@@ -546,19 +550,22 @@ form {
 		.logo {
 			width: 50px;
 		}
-		.nav_menu {
-			display: none;
-		}
 		.res_menu {
 			display: inline-block;
+			padding: 5px;
+			cursor: pointer;
+			
 			transition: all 1s;
+			color: $accentColor;
+			font-size: 30px;
+			width: 50px;
 		}
 		.nav_menu {
+			display: none;
 			background: rgba($white, 0.95);
 			position: relative;
 			top: 0;
 			left: 0;
-			z-index: 999;
 			margin-top: 10px;
 			margin-bottom: 0;
 			border-top: 1px solid $primaryBlue;

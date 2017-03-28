@@ -136,18 +136,16 @@ header {
   height: 93vh;
   width: 100%;
   position: relative; }
-  header .wrapper {
-    position: relative; }
-    header .wrapper .scrollDown {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 80%;
-      font-size: 60px;
-      color: #363738;
-      z-index: 99; }
-    header .wrapper .scrollDown:hover {
-      color: #c6aa82; }
+  header .wrapper .scrollDown {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    font-size: 60px;
+    color: #c6aa82;
+    z-index: 99; }
+  header .wrapper .scrollDown:hover {
+    color: #f1f7f7; }
   header .headerText {
     animation-delay: 0.4s;
     animation-duration: 3s;
@@ -510,17 +508,18 @@ section {
     margin: 10px 0;
     display: -ms-flexbox;
     display: flex;
-    width: 70%;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    width: 100%;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .workDetails div p {
       background: #c6aa82;
       color: #f1f7f7;
-      padding: 5px 10px; }
+      padding: 5px 15px;
+      margin: 0 8px 8px 0; }
   .workDetails h3 {
     font-size: 24px; }
-  .workDetails p {
-    font-size: 12px; }
 
 .devicon {
   font-size: 50px;
@@ -559,8 +558,6 @@ section {
         opacity: 1; }
         .skills .wrapper ul .row1 div:hover p, .skills .wrapper ul .row1 div:hover .devicon {
           color: #c6aa82; }
-    .skills .wrapper ul .row1 {
-      margin-bottom: 100px; }
 
 footer {
   background: #34495e;
@@ -672,6 +669,9 @@ form {
     padding-bottom: 45px; } }
 
 @media (max-width: 645px) {
+  nav .wrapper {
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
   .work_content {
     -ms-flex-align: center;
         align-items: center; }
@@ -693,26 +693,32 @@ form {
     header .headerText h3 {
       text-align: center;
       font-size: 18px; }
+  nav {
+    z-index: 9999; }
   nav .wrapper {
     -ms-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+    z-index: 999; }
     nav .wrapper div {
       width: 100%;
       -ms-flex-pack: justify;
           justify-content: space-between; }
     nav .wrapper .logo {
       width: 50px; }
-    nav .wrapper .nav_menu {
-      display: none; }
     nav .wrapper .res_menu {
       display: inline-block;
-      transition: all 1s; }
+      padding: 5px;
+      cursor: pointer;
+      transition: all 1s;
+      color: #c6aa82;
+      font-size: 30px;
+      width: 50px; }
     nav .wrapper .nav_menu {
+      display: none;
       background: rgba(241, 247, 247, 0.95);
       position: relative;
       top: 0;
       left: 0;
-      z-index: 999;
       margin-top: 10px;
       margin-bottom: 0;
       border-top: 1px solid #34495e; }

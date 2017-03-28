@@ -7,18 +7,17 @@ header {
 	width: 100%;
 	position: relative;	
 	.wrapper {
-		position: relative;
 		.scrollDown {
 			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
 			top: 80%;
 			font-size: 60px;
-			color: $darkBlack;
+			color: $accentColor;
 			z-index: 99;
 		}
 		.scrollDown:hover {
-			color: $accentColor;
+			color: $white;
 		}
 	}
 	.headerText {
