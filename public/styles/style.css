@@ -519,7 +519,10 @@ section {
       padding: 5px 15px;
       margin: 0 8px 8px 0; }
   .workDetails h3 {
-    font-size: 24px; }
+    font-size: 24px;
+    color: #363738; }
+  .workDetails p {
+    color: #363738; }
 
 .devicon {
   font-size: 50px;
