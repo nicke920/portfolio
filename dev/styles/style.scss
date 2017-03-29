@@ -353,12 +353,19 @@ section {
 		color: $darkBlack;
 	}
 }
-.workTitle .fa {
-	margin: 0 20px;
+
+.pieceLinks a {
+	border: 1px solid $primaryBlue;
+	padding: 10px;
+	margin: 10px 10px 10px 0;
 	color: $primaryBlue;
-	align-self: center;
-	font-size: 20px;
+	&:hover {
+		background: $primaryBlue;
+		color: $white;
+	}
 }
+
+
 
 .devicon {
 	font-size: 50px;

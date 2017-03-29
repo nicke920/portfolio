@@ -547,13 +547,14 @@ section {
   .workDetails p {
     color: #363738; }
 
-.workTitle .fa {
-  margin: 0 20px;
-  color: #34495e;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-size: 20px; }
+.pieceLinks a {
+  border: 1px solid #34495e;
+  padding: 10px;
+  margin: 10px 10px 10px 0;
+  color: #34495e; }
+  .pieceLinks a:hover {
+    background: #34495e;
+    color: #f1f7f7; }
 
 .devicon {
   font-size: 50px;
