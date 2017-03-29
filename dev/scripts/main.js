@@ -61,7 +61,7 @@ $(function()  {
 	})
 
 	$('.res_menu').on('click', function() {
-		$('.nav_menu').toggle('fadeIn').css('display', 'flex');
+		$('.nav_menu').toggleClass('show');
 		$('.res_menu').toggleClass('rotate');
 		console.log('clickeddd')
 	})

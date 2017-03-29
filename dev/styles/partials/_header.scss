@@ -6,24 +6,9 @@ header {
 	height: 93vh;
 	width: 100%;
 	position: relative;	
-	.wrapper {
-		.scrollDown {
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			top: 80%;
-			font-size: 60px;
-			color: $accentColor;
-			z-index: 99;
-		}
-		.scrollDown:hover {
-			color: $white;
-		}
-	}
 	.headerText {
 		animation-delay: 0.4s;
 		animation-duration: 3s;
-		margin-top: 136px;
 		text-align: right;
 		width: 50%;
 		transform: translateY(-25%);
@@ -39,6 +24,18 @@ header {
 			margin-right: 4px;
 		}
 	}
+	.scrollDown {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 80%;
+		font-size: 60px;
+		color: $accentColor;
+		z-index: 99;
+	}
+	.scrollDown:hover {
+		color: $white;
+	}
 	.firstSVG {
 		position: absolute;
 		bottom: 0;
@@ -48,13 +45,13 @@ header {
 nav {
 	width: 100%;
 	background: transparent;
-	margin: 0 0 -116px;
 	transition: all 0.8s;
 	animation-delay: 0.4s;
 	animation-duration: 3s;
 	.wrapper {
-		padding: 40px 0;
+		height: 100px;
 		justify-content: center;
+		align-items: center;
 		div {
 			display: flex;
 			justify-content: space-between;
@@ -66,6 +63,9 @@ nav {
 		}
 		.logo {
 			width: 80px;
+		}
+		a {
+			color: $white;
 		}
 		.nav_menu {
 			display: flex;
@@ -83,21 +83,24 @@ nav {
 }
 
 .main-nav-scrolled {
-	background: linear-gradient(rgba($white, 1), rgba($white,0.97));
+	background: $primaryBlue;
 	padding: 0;
 	position: fixed;
 	top: 0;
 	z-index: 90;
-	box-shadow: 0 0 5px 1px $primaryBlue;
+	border-bottom: 1px solid rgba(39,55,71,1);
 	min-height: 75px;
-	padding-top: 15px;
 	.wrapper {
 		padding: 5px 0;
+		background: transparent;
 		.logo {
 			width: 50px;
 		}
 		a {
-			color: $primaryBlue;
+			color: $white;
 		}
 	} 
+	.nav_menu.show {
+		background: $accentColor;
+	}
 }
